@@ -1,5 +1,7 @@
 # Descrição
 
+Implementação de estudo do livro de Laravel da casa do código, utilizando o docker.
+
 Docker utilizando o compose, arquivo de configuração com variáveis de ambiente, criando um container nginx 1.13.3 e um container php 7.1.9-fpm ligados através de um link e criando um container mysql 5.7.19.
 
 Laravel versão 5.5.22
@@ -62,9 +64,9 @@ Laravel versão 5.5.22
 
 1. Clone o repositório usando o comando:
 
-   git clone https://github.com/danielnogueira-dev/Docker-Compose-Nginx-Php-Laravel-Mysql
+   git clone https://github.com/danielnogueira-dev/Estoque-Laravel-Estudo
 
-2. Entre na pasta Docker-Compose-Nginx-Php-Laravel-Mysql e copie o arquivo env-example para .env.
+2. Entre na pasta Estoque-Laravel-Estudo e copie o arquivo env-example para .env.
 
    cp env-example .env
 
