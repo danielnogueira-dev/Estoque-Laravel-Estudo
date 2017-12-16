@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/produtos', 'ProdutoController@lista');
+Route::get('/produtos/mostrar/{id}', 'ProdutoController@mostra')->where('id', '[0-9]+');
