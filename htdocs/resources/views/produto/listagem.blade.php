@@ -17,8 +17,18 @@
 					<td>{{$produto->descricao}}</<td>
 					<td>{{$produto->quantidade}}</<td>
 					<td>
-						<a href="/produtos/mostrar/{{$produto->id}}">
-							<span class="glyphicon glyphicon-search"></span>
+						<a href="{{action('ProdutoController@mostra', ['id' => $produto->id])}}">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+						</a>
+					</td>
+					<td>
+						<a href="{{action('ProdutoController@modifica', ['id' => $produto->id])}}">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+						</a>
+					</td>
+					<td>
+						<a href="{{action('ProdutoController@remove', ['id' => $produto->id])}}">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
 						</a>
 					</td>
 				</tr>
@@ -30,5 +40,12 @@
 				Um ou menos itens no estoque.
 			</span>
 		</h4>
+
+		@if (old('nome'))
+			<div class="alert alert-success">
+				<strong>Sucesso!</strong> O produto {{old('nome')}} foi adicionado.
+			</div>
+		@endif
+
 	@endif
 @stop
