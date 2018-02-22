@@ -22,3 +22,6 @@ Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
 Route::get('/produtos/remove/{id}', 'ProdutoController@remove')->where('id', '[0-9]+');
 Route::get('/produtos/modifica/{id}', 'ProdutoController@modifica')->where('id', '[0-9]+');
 Route::put('/produtos/altera/{id}', 'ProdutoController@altera')->where('id', '[0-9]+');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
